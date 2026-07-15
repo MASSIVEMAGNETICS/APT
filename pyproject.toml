@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apt-cognitive-organism"
+version = "1.0.0"
+description = "Deterministic, local-first cognitive systems research substrate"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Massive Magnetics"}]
+dependencies = ["numpy>=1.26,<3"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+apt-cognitive = "apt.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["apt*"]
